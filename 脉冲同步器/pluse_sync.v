@@ -35,4 +35,7 @@ always @ (posedge des_clk or negedge des_rst_n)
 assign des_pluse = d_reg1 ^ d_reg2 ;
 // assign des_pluse = d_reg1 & ~d_reg2 ;
 
+
+
+
 endmodule
