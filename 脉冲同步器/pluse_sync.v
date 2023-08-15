@@ -11,7 +11,7 @@ module pluse_sync(
                                     
 
 reg 	src_pluse;
-
+//在本地时钟域
 always @ (posedge src_clk or negedge src_rst_n)
     if(!src_rst_n)
         src_pluse <= 1'b0;
@@ -24,6 +24,7 @@ always @ (posedge src_clk or negedge src_rst_n)
         
 reg		 d_reg1,d_reg2;
 
+//在目的时钟域
 always @ (posedge des_clk or negedge des_rst_n)
     if(!des_rst_n)
         {d_reg1,d_reg2} <= 2'b00;
